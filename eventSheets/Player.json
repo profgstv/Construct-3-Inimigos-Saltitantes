@@ -1,0 +1,345 @@
+{
+	"name": "Player",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-floor",
+					"objectClass": "Jogador",
+					"sid": 121686479294667,
+					"behaviorType": "Plataforma"
+				},
+				{
+					"id": "is-moving",
+					"objectClass": "Jogador",
+					"sid": 270204247232159,
+					"behaviorType": "Plataforma",
+					"isInverted": true
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 599809421123103,
+					"parameters": {
+						"key": 32
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Jogador",
+					"sid": 169810677970845,
+					"parameters": {
+						"animation": "\"Idle\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 553090671910451
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-moving",
+					"objectClass": "Jogador",
+					"sid": 797864227168136,
+					"behaviorType": "Plataforma"
+				},
+				{
+					"id": "is-on-floor",
+					"objectClass": "Jogador",
+					"sid": 838115872886935,
+					"behaviorType": "Plataforma"
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 602023792517440,
+					"parameters": {
+						"key": 32
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Jogador",
+					"sid": 229783377727760,
+					"parameters": {
+						"animation": "\"Run\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 146267998804736
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-jumping",
+					"objectClass": "Jogador",
+					"sid": 546730841968537,
+					"behaviorType": "Plataforma"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Jogador",
+					"sid": 108238391849814,
+					"parameters": {
+						"animation": "\"Jump\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 198145156499143
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 171350713808418,
+					"parameters": {
+						"key": 87
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Jogador",
+					"sid": 531311093482428,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"control": "jump"
+					}
+				}
+			],
+			"sid": 783350809254333
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 789031484930500,
+					"parameters": {
+						"key": 32
+					},
+					"isInverted": true
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 394577693385484,
+					"parameters": {
+						"key": 68
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Jogador",
+					"sid": 958485504641961,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"control": "right"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "Jogador",
+					"sid": 321966507377472,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "Weapon",
+					"sid": 584361264381993,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 794047806741028
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 273946756347226,
+					"parameters": {
+						"key": 32
+					},
+					"isInverted": true
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 511347590201967,
+					"parameters": {
+						"key": 65
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Jogador",
+					"sid": 108678633214691,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"control": "left"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "Jogador",
+					"sid": 344809816085502,
+					"parameters": {
+						"state": "mirrored"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "Weapon",
+					"sid": 737400750013624,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 976228391954889
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 791617097283257,
+					"parameters": {
+						"key": 32
+					}
+				},
+				{
+					"id": "is-moving",
+					"objectClass": "Jogador",
+					"sid": 851425168210893,
+					"behaviorType": "Plataforma",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Jogador",
+					"sid": 442547167233425,
+					"parameters": {
+						"animation": "\"Attack\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Weapon",
+					"sid": 550563886250233,
+					"parameters": {
+						"animation": "\"Attack\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 709263136163697
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-animation-playing",
+					"objectClass": "Jogador",
+					"sid": 184036813252177,
+					"parameters": {
+						"animation": "\"Attack\""
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Weapon",
+					"sid": 630643262476031,
+					"parameters": {
+						"animation": "\"Idle\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 856427932118462
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 957663943620922,
+					"parameters": {
+						"key": 16
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-jump-strength",
+					"objectClass": "Jogador",
+					"sid": 962832513530127,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"jump-strength": "Jogador.Plataforma.JumpStrength*1.1"
+					}
+				}
+			],
+			"sid": 943097514279514
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 884499853447029
+				}
+			],
+			"actions": [
+				{
+					"id": "set-jump-strength",
+					"objectClass": "Jogador",
+					"sid": 124429712776084,
+					"behaviorType": "Plataforma",
+					"parameters": {
+						"jump-strength": "800"
+					}
+				}
+			],
+			"sid": 528988638098163
+		}
+	],
+	"sid": 423539779008685
+}

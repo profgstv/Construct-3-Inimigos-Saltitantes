@@ -1,5 +1,5 @@
 {
-	"name": "Axe",
+	"name": "Weapon",
 	"plugin-id": "Sprite",
 	"sid": 559480125550975,
 	"isGlobal": false,
@@ -49,13 +49,39 @@
 					{
 						"width": 128,
 						"height": 128,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.53125,
+						"originY": 0.53125,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1005411,
+						"imageSpriteId": 9832650,
+						"collisionPoly": {
+							"points": [
+								0.5,
+								0.5,
+								0.5,
+								0.5,
+								0.5,
+								0.5,
+								0.5,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 128,
+						"height": 128,
+						"originX": 0.53125,
+						"originY": 0.53125,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 667401,
 						"collisionPoly": {
 							"points": [
 								0.6904297173023224,
@@ -81,13 +107,13 @@
 					{
 						"width": 128,
 						"height": 128,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.53125,
+						"originY": 0.53125,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 602813,
+						"imageSpriteId": 565708,
 						"collisionPoly": {
 							"points": [
 								0.7871091365814209,
@@ -117,13 +143,13 @@
 					{
 						"width": 128,
 						"height": 128,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.53125,
+						"originY": 0.53125,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7109463,
+						"imageSpriteId": 1583990,
 						"collisionPoly": {
 							"points": [
 								0.7119140326976776,
@@ -163,13 +189,13 @@
 					{
 						"width": 128,
 						"height": 128,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.53125,
+						"originY": 0.53125,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 4865212,
+						"imageSpriteId": 2236091,
 						"collisionPoly": {
 							"points": [
 								0.5507812798023224,
@@ -201,13 +227,13 @@
 					{
 						"width": 128,
 						"height": 128,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.53125,
+						"originY": 0.53125,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1237382,
+						"imageSpriteId": 3619258,
 						"collisionPoly": {
 							"points": [
 								0.5908204019069672,
@@ -229,29 +255,15 @@
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
-					},
-					{
-						"width": 128,
-						"height": 128,
-						"originX": 0.5,
-						"originY": 0.5,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"fileType": "image/png",
-						"imageSpriteId": 1915678,
-						"useCollisionPoly": true,
-						"duration": 1,
-						"tag": ""
 					}
 				],
-				"sid": 277458242312240,
-				"name": "Slashing",
+				"sid": 491701786545846,
+				"name": "Attack",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 36
+				"speed": 25
 			}
 		],
 		"subfolders": []

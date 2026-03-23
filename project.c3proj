@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 47602,
-	"name": "Inimigos Saltitantes",
+	"name": "InimigosSaltitantes",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
@@ -43,8 +43,8 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Physics",
-			"name": "Física",
+			"id": "LOS",
+			"name": "Campo de visão",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -89,15 +89,14 @@
 		"items": [
 			"PlanoDeFundoEmBlocos",
 			"Mosaico",
-			"Player",
 			"Teclado",
-			"Axe",
+			"Weapon",
 			"Enemy",
-			"EnemyDir",
 			"EnemyBounce",
 			"efeito",
 			"EnemyPosX",
-			"EnemyPosY"
+			"EnemyPosY",
+			"Jogador"
 		],
 		"subfolders": []
 	},
@@ -110,13 +109,15 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Jogo"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Folha de eventos 1"
+			"Main",
+			"Enemy",
+			"Player"
 		],
 		"subfolders": []
 	},

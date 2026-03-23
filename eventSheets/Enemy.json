@@ -1,0 +1,204 @@
+{
+	"name": "Enemy",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 460538256114118,
+					"parameters": {
+						"object": "Enemy"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 698521568679104,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-y",
+							"objectClass": "Enemy",
+							"sid": 767966729477210,
+							"parameters": {
+								"comparison": 5,
+								"y-co-ordinate": "LayoutHeight - Mosaico.TileHeight"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Enemy",
+							"sid": 679945037843136
+						}
+					],
+					"sid": 254796195873819
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Enemy",
+							"sid": 548776990894661,
+							"parameters": {
+								"object": "Mosaico"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Enemy",
+							"sid": 202392154538686,
+							"parameters": {
+								"instance-variable": "enemyDir",
+								"value": "choose(0,1)"
+							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "Enemy",
+							"sid": 456723897925720,
+							"behaviorType": "Plataforma",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
+					"sid": 846499027929752
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Enemy",
+							"sid": 106629419331497,
+							"parameters": {
+								"instance-variable": "enemyDir",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Enemy",
+							"sid": 184145862737272,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "Enemy",
+							"sid": 673032870143689,
+							"behaviorType": "Plataforma",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 960026744358407
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Enemy",
+							"sid": 297785929942919,
+							"parameters": {
+								"instance-variable": "enemyDir",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Enemy",
+							"sid": 104478408380183,
+							"parameters": {
+								"state": "mirrored"
+							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "Enemy",
+							"sid": 238085393194166,
+							"behaviorType": "Plataforma",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 458550668346888
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Enemy",
+							"sid": 416633959206912,
+							"parameters": {
+								"object": "EnemyBounce"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Enemy",
+							"sid": 855006142763998,
+							"behaviorType": "Plataforma",
+							"parameters": {
+								"control": "jump"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Enemy",
+							"sid": 244995416096760,
+							"parameters": {
+								"instance-variable": "enemyDir",
+								"value": "choose(0,1)"
+							}
+						}
+					],
+					"sid": 159160501193925
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Weapon",
+							"sid": 954827197338537,
+							"parameters": {
+								"object": "Enemy"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Enemy",
+							"sid": 577764173236427
+						}
+					],
+					"sid": 816400923703778
+				}
+			]
+		}
+	],
+	"sid": 723096422028881
+}

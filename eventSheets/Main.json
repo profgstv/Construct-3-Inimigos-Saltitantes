@@ -1,0 +1,302 @@
+{
+	"name": "Main",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Player"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Enemy"
+		},
+		{
+			"eventType": "variable",
+			"name": "enemyPosIndex",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 270016435000009
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 367830571507036
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 720126070321448,
+					"parameters": {
+						"variable": "enemyPosIndex",
+						"value": "choose(0, 1, 2, 3, 4, 5, 6) "
+					}
+				},
+				{
+					"id": "clear",
+					"objectClass": "EnemyPosX",
+					"sid": 468145911050108,
+					"parameters": {
+						"value": "0"
+					}
+				},
+				{
+					"id": "clear",
+					"objectClass": "EnemyPosY",
+					"sid": 374090375007765,
+					"parameters": {
+						"value": "0"
+					}
+				},
+				{
+					"id": "insert",
+					"objectClass": "EnemyPosX",
+					"sid": 462693893721258,
+					"parameters": {
+						"value": "723",
+						"index": "0",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "insert",
+					"objectClass": "EnemyPosY",
+					"sid": 271827692821972,
+					"parameters": {
+						"value": "1035",
+						"index": "0",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "insert",
+					"objectClass": "EnemyPosX",
+					"sid": 433648389461947,
+					"parameters": {
+						"value": "1208",
+						"index": "1",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "insert",
+					"objectClass": "EnemyPosY",
+					"sid": 612460727499161,
+					"parameters": {
+						"value": "957",
+						"index": "1",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "insert",
+					"objectClass": "EnemyPosX",
+					"sid": 472039046542666,
+					"parameters": {
+						"value": "1437",
+						"index": "2",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "insert",
+					"objectClass": "EnemyPosY",
+					"sid": 973803587147113,
+					"parameters": {
+						"value": "809",
+						"index": "2",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "insert",
+					"objectClass": "EnemyPosX",
+					"sid": 999309841696104,
+					"parameters": {
+						"value": "1703",
+						"index": "3",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "insert",
+					"objectClass": "EnemyPosY",
+					"sid": 215883999118671,
+					"parameters": {
+						"value": "949",
+						"index": "3",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "insert",
+					"objectClass": "EnemyPosX",
+					"sid": 872111127411885,
+					"parameters": {
+						"value": "2055",
+						"index": "4",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "insert",
+					"objectClass": "EnemyPosY",
+					"sid": 530080696182741,
+					"parameters": {
+						"value": "993",
+						"index": "4",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "insert",
+					"objectClass": "EnemyPosX",
+					"sid": 937836874877765,
+					"parameters": {
+						"value": "2431",
+						"index": "5",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "insert",
+					"objectClass": "EnemyPosY",
+					"sid": 488348885172773,
+					"parameters": {
+						"value": "1007",
+						"index": "5",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "insert",
+					"objectClass": "EnemyPosX",
+					"sid": 440156840143694,
+					"parameters": {
+						"value": "196",
+						"index": "6",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "insert",
+					"objectClass": "EnemyPosY",
+					"sid": 558092758760473,
+					"parameters": {
+						"value": "1225",
+						"index": "6",
+						"axis": "x"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Enemy",
+					"sid": 942503483900737,
+					"parameters": {
+						"animation": "\"Running\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 606753646095520
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 935936303126761,
+					"parameters": {
+						"interval-seconds": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 142778083420436,
+					"parameters": {
+						"variable": "enemyPosIndex",
+						"value": "choose(0, 1, 2, 3, 4, 5, 6) "
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 766347554673891,
+					"parameters": {
+						"object-to-create": "Enemy",
+						"layer": "0",
+						"x": "EnemyPosX.At(enemyPosIndex)",
+						"y": "EnemyPosY.At(enemyPosIndex)",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 385954294506620
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Jogador",
+					"sid": 467955459916111,
+					"parameters": {
+						"object": "Enemy"
+					}
+				},
+				{
+					"id": "compare-y",
+					"objectClass": "Jogador",
+					"sid": 607577937629582,
+					"parameters": {
+						"comparison": 5,
+						"y-co-ordinate": "LayoutHeight - Mosaico.TileHeight"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 555164079077394
+				}
+			],
+			"sid": 844517812335511,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 324914494379773
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Weapon",
+					"sid": 246794190678795,
+					"parameters": {
+						"x": "Jogador.X",
+						"y": "Jogador.Y"
+					}
+				}
+			],
+			"sid": 640173713599921
+		}
+	],
+	"sid": 840778852449786
+}
