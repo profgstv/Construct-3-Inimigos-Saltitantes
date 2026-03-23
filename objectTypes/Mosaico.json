@@ -1,0 +1,118 @@
+{
+	"name": "Mosaico",
+	"plugin-id": "Tilemap",
+	"sid": 661679764383888,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Sólido",
+			"sid": 498063286281550
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 1280,
+		"height": 500,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 2509377,
+		"useCollisionPoly": true,
+		"tag": ""
+	},
+	"tile-collision-polys": {
+		"6": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0.42857144329998914,
+					1,
+					0.02316600107318186,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": true
+		},
+		"8": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0.011582982125889842,
+					1,
+					0.44015446224728133,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": true
+		},
+		"23": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0.4092664608163722,
+					0.20647335052490193,
+					0.17567568303995607,
+					0.5775667428970335,
+					0.01833976465762809,
+					1,
+					0,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": true
+		},
+		"63": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0.08687258687258691,
+					0.20089282308306028,
+					0.05694982167836784,
+					0.3794641494750977,
+					0.002413127413127421,
+					0.6104912757873534,
+					0.001930509294782366,
+					0.8074775763920373,
+					0.05308882149950417,
+					0.9955357824053083,
+					0.08108109580964194,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": false
+		},
+		"85": {
+			"collisionPoly": {
+				"points": [
+					0,
+					0.3146717999432537,
+					1,
+					0.29729732675441894,
+					1,
+					1,
+					0,
+					1
+				]
+			},
+			"useCollisionPoly": true
+		}
+	}
+}
